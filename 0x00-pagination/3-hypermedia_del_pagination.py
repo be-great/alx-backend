@@ -54,6 +54,7 @@ class Server:
         dataset = self.indexed_dataset()
         data = []
         next_index = index
+        # create new data from only the starting of next_index
         # collect page_size items starting from 'index'
         while len(data) < page_size and next_index < len(dataset):
             if next_index in dataset:
