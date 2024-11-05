@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-A Basic flask application
+ 1. Basic Babel setup
 """
 from flask import Flask
 from flask import render_template
@@ -16,21 +16,16 @@ class Config(object):
     BABEL_DEFAULT_TIMEZONE = 'UTC'
 
 
-# Instantiate the application object
 app = Flask(__name__)
 app.config.from_object(Config)
-
-# Wrap the application with Babel
-babel = Babel(app)
+Babel = Babel(app)
 
 
 @app.route('/', strict_slashes=False)
 def index() -> str:
-    """
-    Renders a basic html template
-    """
+    """render the 1-index page"""
     return render_template('1-index.html')
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     app.run()
