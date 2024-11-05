@@ -11,6 +11,7 @@ app = Flask(__name__)
 
 @app.route('/', strict_slashes=False)
 def index() -> str:
+    """render the 0-index page"""
     return render_template('0-index.html')
 
 
