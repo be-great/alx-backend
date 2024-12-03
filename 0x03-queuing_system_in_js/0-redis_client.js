@@ -1,3 +1,7 @@
+#!/usr/bin/node
+/**
+ *  1. Node Redis Client 
+ */
 import { createClient } from 'redis';
 
 // Create a Redis client
