@@ -1,21 +1,19 @@
 #!/usr/bin/node
 /**
- *  1. Node Redis Client 
+ *  Node Redis Client
  */
+
 const redis = require('redis');
 
 // Create a Redis client
 const client = redis.createClient();
 
-// log success message when connected
-client.on('conntect', () => {
-
-    console.log('Redis client conntected to the server');
+// Log success message when connected
+client.on('connect', () => {
+  console.log('Redis client connected to the server');
 });
 
-// log error message on connection failure
+// Log error message on connection failure
 client.on('error', (err) => {
-
-    console.log(`Redis client not connected to the server: ${err.message}`);
+  console.log(`Redis client not connected to the server: ${err.message}`);
 });
-client.connect();
