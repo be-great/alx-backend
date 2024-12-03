@@ -2,10 +2,10 @@
 /**
  *  1. Node Redis Client 
  */
-import { createClient } from 'redis';
+const redis = require('redis');
 
 // Create a Redis client
-const client = createClient();
+const client = redis.createClient();
 
 // log success message when connected
 client.on('conntect', () => {
